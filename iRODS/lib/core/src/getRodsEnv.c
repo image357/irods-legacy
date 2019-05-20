@@ -205,7 +205,7 @@ int getRodsEnvFromFile(char *fileName, rodsEnv *rodsEnvArg, int errorLevel) {
       envFileFound=1;
       buf[LARGE_BUF_LEN-1]='\0';
       fchar = fgets(buf, LARGE_BUF_LEN-1, file);
-      for(;fchar!='\0';) {
+      for(;*fchar!='\0';) {
 	 if (buf[0]=='#' || buf[0]=='/') {
 	    buf[0]='\0'; /* Comment line, ignore */
 	 }
