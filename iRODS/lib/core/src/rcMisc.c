@@ -3441,7 +3441,7 @@ char *collInfo2, specColl_t *specColl)
 
     if (specColl == NULL) return (USER__NULL_INPUT_ERR);
 
-    if (*type == '\0') {
+    if (type == NULL) {
 	specColl->collClass = NO_SPEC_COLL;
 	return (SYS_UNMATCHED_SPEC_COLL_TYPE);
     }
